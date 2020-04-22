@@ -1,0 +1,28 @@
+{
+  "name": "real-time-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeronimo3875br/real-time-chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeronimo3875br/real-time-chat/issues"
+  },
+  "homepage": "https://github.com/jeronimo3875br/real-time-chat#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0"
+  }
+}
