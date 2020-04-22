@@ -6,8 +6,19 @@ window.addEventListener("load", (event) => {
 		$("#messages").append("<h2 id='data'>" + message.username + ": " + message.message + "</h2>");
 	};
 
+	function renderMyMessage(message){
+		$("#messages").append("<h2 id='data'>Eu: " + message.message + "</h2>");
+	};
+
 	socket.on("recivedMessage", function(message){
+		window.navigator.vibrate(200);
 		renderMessage(message);
+	});
+
+	socket.on("previusMessages", function(messages){
+		for (message of messages){
+			renderMessage(message);
+		};
 	});
 
 
@@ -19,13 +30,20 @@ window.addEventListener("load", (event) => {
 		var usr = document.querySelector("#usr").value;
 		var msg = document.querySelector("#msg").value;
 
-		const Object =  {
-			username: usr,
-			message: msg
-		};
+		if (usr == "" || msg == ""){
+			window.navigator.vibrate(200);
+			window.alert("Fill in all fields!");
+		}else{
 
-		socket.emit("sendMessage", Object);
-		renderMessage(Object);
+			const Object =  {
+				username: usr,
+				message: msg
+			};
+
+			socket.emit("sendMessage", Object);
+			renderMyMessage(Object);
+
+		};
 
 	});
 

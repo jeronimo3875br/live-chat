@@ -15,6 +15,8 @@ io.on("connection", socket => {
 
 	console.log("\n\n[+] - Conectado: " + socket.id);
 
+	socket.emit("previusMessages", messages);
+
 	socket.on("sendMessage", data => {
 		messages.push(data);
 		console.log(data);

@@ -48,10 +48,12 @@ body {
 	padding: 7px;
 	outline: 0 none;
 	margin: 10px;
+	background-color: #ffffff;
+	overflow: scroll;
 }
 
 #data {
-	color: #ffffff;
+	color: #212121;
 	font-size: 25px;
         font-weight: 450;
         font-family: arial;
