@@ -4,7 +4,7 @@
 ![image](https://github.com/jeronimo3875br/real-time-chat/blob/master/chat.png)
 
 
-<h3>Live chat developed in HTML, CSS and JS using Node.js with express, Socket.io and MySQL.</h3>
+<h3>Live chat developed in HTML, CSS and JS using Node.js with express, Socket.io.</h3>
 
 
 <h1>How to run</h1>
