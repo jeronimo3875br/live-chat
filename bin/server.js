@@ -5,12 +5,13 @@ const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 const debug = require("debug")("nodestr:server");
 
-const port = process.env.PORT | 8080;
+const port = process.env.PORT || 8080;
 
 app.set("port", port);
 server.listen(port, console.log("\n\n[+] - Rodando: " + port));
 
 var messages = [];
+
 io.on("connection", socket => {
 
 	console.log("\n\n[+] - Conectado: " + socket.id);
