@@ -1,7 +1,5 @@
 window.addEventListener("load", (event) => {
-	
-	//const user = window.prompt("Enter Username: ");
-	
+
 	$('#loginModal').modal("show")
 	
 	const formLogin = document.querySelector("#getUser");
@@ -52,7 +50,7 @@ window.addEventListener("load", (event) => {
 
 		if (usr == "" || msg == ""){
 			
-			$("#loginModal").modal();
+			$("#loginModal").modal("show");
 			
 		}else{
 
