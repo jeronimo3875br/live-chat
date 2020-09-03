@@ -1,6 +1,6 @@
 window.addEventListener("load", (event) => {
 
-	var socket = io("http://localhost:8080/");
+	var socket = io();
 
 	function renderMessage(message){
 		$("#messages").append("<h2 id='data'>" + message.username + ": " + message.message + "</h2>");
