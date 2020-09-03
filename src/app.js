@@ -10,7 +10,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
-app.set("views", "../src/views");
+app.set("views", "./views");
 
 app.use("/", routeIndex);
+
 module.exports = app;
