@@ -1,13 +1,17 @@
 window.addEventListener("load", (event) => {
+	
+	const user = window.prompt("Enter Username: ");
+	
+	window.localStorage.setItem("user", user);
 
 	var socket = io();
 
 	function renderMessage(message){
-		$("#messages").append("<h2 id='data'>" + message.username + ": " + message.message + "</h2>");
+		$("#messages").append("<strong>" + message.username + ": " + message.message + "</strong><hr/>");
 	};
 
 	function renderMyMessage(message){
-		$("#messages").append("<h2 id='data'>Eu: " + message.message + "</h2>");
+		$("#messages").append("<strong style='color: #4282FD'>Eu: " + message.message + "</strong></hr></br>");
 	};
 
 	socket.on("recivedMessage", function(message){
@@ -22,19 +26,20 @@ window.addEventListener("load", (event) => {
 	});
 
 
-	const form = document.querySelector(".form");
+	const form = document.querySelector("form");
 	form.addEventListener("submit", (event) => {
 
 		event.preventDefault();
 
 		window.navigator.vibrate(200);
 
-		var usr = document.querySelector("#usr").value;
+		var usr = window.localStorage.getItem("user");
 		var msg = document.querySelector("#msg").value;
 
 		if (usr == "" || msg == ""){
-			window.navigator.vibrate(200);
+			
 			window.alert("Fill in all fields!");
+			
 		}else{
 
 			const Object =  {

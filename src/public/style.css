@@ -1,78 +1,15 @@
 * {	
 	margin: 0px;
 	padding: 0px;	
-}
-
-body {
-	background-image: linear-gradient(
-		to bottom,
-		#9434FF,
-		#07A6FF
-	);
-	width: 100vw;
-	height: 100vh;
-}
-
-.container {
-	position: relative;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
-	top: 5%;
-}
-
-/*::-webkit-input-placeholder {
-	color: #212121;
-}*/
-
-#usr {
-	width: 90vw;
-	height: 7vh;
-	border: 3px solid #dddddd;
-	border-radius: 7px;
-	color: #212121;
-	padding: 7px;
-	font-size: 25px;
-	font-weight: 450;
-	margin: 10px;
-	outline: 0 none;
+	outline: none;
 	font-family: arial;
+	box-sizing: border-box;
 }
 
 #messages {
-	width: 90vw;
+	width: 100%;
 	height: 50vh;
-	border: 3px solid #dddddd;
-	border-radius: 7px;
-	padding: 7px;
-	outline: 0 none;
-	margin: 10px;
-	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	padding: 20px;
 	overflow: scroll;
-}
-
-#data {
-	color: #212121;
-	font-size: 25px;
-        font-weight: 450;
-        font-family: arial;
-}
-
-#msg {
-	width: 90vw;
-	height: 7vh;
-	border: 3px solid #dddddd;
-	border-radius: 7px;
-	color: #212121;
-	padding: 7px;
-	font-size: 25px;
-	font-weight: 450;
-	margin: 10px;
-	outline: 0 none;
-	font-family: arial;
-}
-
-#submit {
-	display: none;
 }

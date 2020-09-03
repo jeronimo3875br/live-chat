@@ -7,26 +7,22 @@
 		<meta charset="UTF-8"/>
 		<meta name="theme-color" content="#9434FF"/>	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="/style.css" type="text/css"/>		
+		<link rel="stylesheet" href="/style.css" type="text/css"/>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="/script.js" type="text/javascript"></script>
 	</head>
 	
 	<body>
 		<div class="container">
-			<form class="form" method="post" action="">
-				<input 
-					type="text" 
-					id="usr" 
-					placeholder="@User"
-				/>
-				<div id="messages"></div>
-				<input 
-					id="msg" 
-					placeholder="@Message"
-				></input>
-				<input type="submit" id="submit"/>
+			<div id="div" class="alert alert-warning mt-3 mb-3">App feito apenas como demonstração de Habilidades :)</div>
+			<div id="messages"></div>
+			<form class="form-group mt-3">
+				<input id="msg" type="text" class="form-control" placeholder="Enter Message..."/>
+				<input type="submit" class="btn btn-primary mt-2"/>
 			</form>
 		</div>
 	</body>	
