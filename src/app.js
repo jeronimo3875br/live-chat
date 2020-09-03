@@ -3,7 +3,7 @@
 const express = require("express");
 const path = require("path");
 
-const routeIndex = require("./routes/index-route");
+const routeIndex = require("./routes/index.js");
 
 const app = express();
 

@@ -3,7 +3,6 @@
 const app = require("./app");
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
-const debug = require("debug")("nodestr:server");
 
 const port = process.env.PORT || 8080;
 
@@ -24,16 +23,4 @@ io.on("connection", socket => {
 		socket.broadcast.emit("recivedMessage", data);
 	});
 
-});
-
-server.on("error", (err) => {
-	console.log("[!] - Error: " + err);
-});
-
-server.on("listening", () => {
-	const addr = server.address();
-	const bind = typeof addr === "string"
-	? "pipe" + addr
-	: "port" + addr.port;
-	debug("Listening on " + bind);
 });

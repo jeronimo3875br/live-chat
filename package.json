@@ -2,7 +2,7 @@
   "name": "real-time-chat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/server.js",
   "scripts": {
     "start": "node ./src/server.js"
   },
@@ -18,8 +18,7 @@
   },
   "homepage": "https://github.com/jeronimo3875br/real-time-chat#readme",
   "dependencies": {
-    "debug": "^4.1.1",
-    "ejs": "^3.0.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "http": "^0.0.1-security",
     "path": "^0.12.7",
