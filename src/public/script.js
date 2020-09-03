@@ -27,6 +27,8 @@ window.addEventListener("load", (event) => {
 
 		event.preventDefault();
 
+		window.navigator.vibrate(200);
+
 		var usr = document.querySelector("#usr").value;
 		var msg = document.querySelector("#msg").value;
 

@@ -4,6 +4,8 @@ const express = require("express");
 const path = require("path");
 const cors = require("cors");
 
+const helmet = require("helmet");
+
 const app = express();
 
 const server = require("http").createServer(app);
@@ -15,6 +17,8 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 
 app.use(cors());
+
+app.use(helmet());
 
 const index = express.Router().get("/", (req, res) => {
         res.sendFile("index.html");
