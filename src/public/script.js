@@ -1,8 +1,22 @@
 window.addEventListener("load", (event) => {
 	
-	const user = window.prompt("Enter Username: ");
+	//const user = window.prompt("Enter Username: ");
 	
-	window.localStorage.setItem("user", user);
+	$('#loginModal').modal("show")
+	
+	const formLogin = document.querySelector("#getUser");
+	
+	formLogin.addEventListener("submit", (event) => {
+		
+		event.preventDefault();
+		
+		let user = document.querySelector("#usr").value;
+		
+		window.localStorage.setItem("user", user);
+		
+		$("#loginModal").modal("hide");
+		
+	});
 
 	var socket = io();
 
@@ -11,7 +25,7 @@ window.addEventListener("load", (event) => {
 	};
 
 	function renderMyMessage(message){
-		$("#messages").append("<strong style='color: #4282FD'>Eu: " + message.message + "</strong></hr></br>");
+		$("#messages").append("<strong style='color: #4282FD'>Eu: " + message.message + "</strong><hr/>");
 	};
 
 	socket.on("recivedMessage", function(message){
@@ -26,7 +40,7 @@ window.addEventListener("load", (event) => {
 	});
 
 
-	const form = document.querySelector("form");
+	const form = document.querySelector("#messageForm");
 	form.addEventListener("submit", (event) => {
 
 		event.preventDefault();
@@ -38,7 +52,7 @@ window.addEventListener("load", (event) => {
 
 		if (usr == "" || msg == ""){
 			
-			window.alert("Fill in all fields!");
+			$("#loginModal").modal();
 			
 		}else{
 
@@ -49,6 +63,8 @@ window.addEventListener("load", (event) => {
 
 			socket.emit("sendMessage", Object);
 			renderMyMessage(Object);
+			
+			document.querySelector("#msg").value = "";
 
 		};
 
