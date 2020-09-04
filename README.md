@@ -1,14 +1,5 @@
-<h1>Real time Chat</h1>
+#Real time Chat
 
-Live chat developed in HTML, CSS and JS using Node.js with express, Socket.io.
+Live chat developed in HTML, CSS and JS using Node.js with express, Socket.io
 
-
-## How to run
-
-<code>cd ./real-time-chat</code>
-
-<code>npm install</code>
-
-<code>cd ./bin</code>
-
-<code>node ./server.js</code>
+<a href="https://www.gjeronimo-chat.herokuapp.com">https://www.gjeronimo-chat.herokuapp.com</a>
