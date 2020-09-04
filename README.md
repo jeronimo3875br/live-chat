@@ -2,4 +2,4 @@
 
 Live chat developed in HTML, CSS and JS using Node.js with express, Socket.io
 
-<a href="https://www.gjeronimo-chat.herokuapp.com">https://www.gjeronimo-chat.herokuapp.com</a>
+<a href="https://gjeronimo-chat.herokuapp.com/">Click here to test the chat.</a>
