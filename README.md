@@ -1,5 +1,7 @@
 # Live Chat
 
+![demonstrative image](https://github.com/jeronimo3875br/live-chat/blob/master/Screenshot_20200912-114613.jpg)
+
 Live chat developed in HTML, CSS, JS, Node.js, express and Socket.
 
 # How to use
