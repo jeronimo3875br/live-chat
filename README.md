@@ -10,7 +10,7 @@ With the chat downloaded, and, having nodejs installed on your machine, we need 
 
 After the dependencies are downloaded, we will run the main file, to run our server. Then, run: 
 
-    node server.js
+    node ./src/server.js
 
 By opening the project at the indicated URL, the program will ask for your username, once inserted, you can chat at will.
 
