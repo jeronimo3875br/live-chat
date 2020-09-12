@@ -1,6 +1,6 @@
 # Live Chat
 
-Live chat developed in HTML, CSS and JS using Node.js with express, Socket.
+Live chat developed in HTML, CSS, JS, Node.js, express and Socket.
 
 # How to use
 
