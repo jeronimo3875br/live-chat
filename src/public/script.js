@@ -49,23 +49,27 @@ window.addEventListener("load", (event) => {
 
 		var msg = document.querySelector("#msg").value;
 
-		if (msg.length < 1 || msg[0] == "<"){
-			
-			return;
-			
-		}else{
+		var newMessage = [];
 
-			const Object =  {
-				username: (usr.length < 3) ? usr : "Anônimo" ,
-				message: msg
+		for (var i = 0; i < msg.length; i++){
+
+			if (msg[i] == "<" || msg[i] == ">"){
+				newMessage.push(" ");
+			}else{
+				newMessage.push(msg[i]);
 			};
 
-			socket.emit("sendMessage", Object);
-			renderMyMessage(Object);
-			
-			return document.querySelector("#msg").value = "";
-
 		};
+
+		const Object = {
+			username: (usr.length < 3) ? usr : "Anônimo",
+			message: newMessage.join("")
+		};
+
+                socket.emit("sendMessage", Object);
+		renderMyMessage(Object);
+
+		return document.querySelector("#msg").value = "";
 
 	});
 
