@@ -46,23 +46,24 @@ window.addEventListener("load", (event) => {
 		window.navigator.vibrate(200);
 
 		var usr = window.localStorage.getItem("user");
+
 		var msg = document.querySelector("#msg").value;
 
-		if (usr == "" || msg == ""){
+		if (msg.length < 1 || msg[0] == "<"){
 			
-			$("#loginModal").modal("show");
+			return;
 			
 		}else{
 
 			const Object =  {
-				username: usr,
+				username: (usr.length < 3) ? usr : "Anônimo" ,
 				message: msg
 			};
 
 			socket.emit("sendMessage", Object);
 			renderMyMessage(Object);
 			
-			document.querySelector("#msg").value = "";
+			return document.querySelector("#msg").value = "";
 
 		};
 
