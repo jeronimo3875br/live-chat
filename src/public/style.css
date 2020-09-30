@@ -13,3 +13,19 @@
 	padding: 20px;
 	overflow: scroll;
 }
+
+.wave {
+	position: relative;
+	top: 0px;
+	z-index: -999;
+	margin-bottom: 40px;
+}
+
+#sendmessage {
+	background-image: linear-gradient(
+		to left,
+		#0099ff,
+		#0074FF
+	);
+	border: 1px solid #dddddd;
+}
