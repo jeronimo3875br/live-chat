@@ -50,7 +50,7 @@ window.addEventListener("load", (event) => {
 		var msg = escape(document.querySelector("#msg").value);
 
 		const Object = {
-			username: (usr.length < 1) ? usr : "Anônimo",
+			username: (usr.length <= 1 || usr == "") ? usr : "Anônimo",
 			message: msg
 		};
 
