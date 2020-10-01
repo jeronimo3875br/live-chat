@@ -47,7 +47,7 @@ window.addEventListener("load", (event) => {
 
 		var usr = window.localStorage.getItem("user");
 
-		var msg = escape(document.querySelector("#msg").value);
+		var msg = document.querySelector("#msg").value;
 
 		const Object = {
 			username: (usr.length <= 1 || usr == "") ? usr : "Anônimo",
