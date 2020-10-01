@@ -47,23 +47,11 @@ window.addEventListener("load", (event) => {
 
 		var usr = window.localStorage.getItem("user");
 
-		var msg = document.querySelector("#msg").value;
-
-		var newMessage = [];
-
-		for (var i = 0; i < msg.length; i++){
-
-			if (msg[i] == "<" || msg[i] == ">"){
-				newMessage.push(" ");
-			}else{
-				newMessage.push(msg[i]);
-			};
-
-		};
+		var msg = escape(document.querySelector("#msg").value);
 
 		const Object = {
-			username: (usr.length < 3) ? usr : "Anônimo",
-			message: newMessage.join("")
+			username: (usr.length < 1) ? usr : "Anônimo",
+			message: msg
 		};
 
                 socket.emit("sendMessage", Object);
@@ -72,6 +60,5 @@ window.addEventListener("load", (event) => {
 		return document.querySelector("#msg").value = "";
 
 	});
-
 
 });
