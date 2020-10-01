@@ -7,7 +7,6 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 const app = express();
-
 const server = require("http").createServer(app);
 const io = require("socket.io")(server);
 
@@ -39,8 +38,8 @@ io.on("connection", socket => {
 	socket.emit("previusMessages", messages);
 
 	socket.on("sendMessage", data => {
-		messages.push(data);
 		console.log(data);
+		messages.push(data);
 		socket.broadcast.emit("recivedMessage", data);
 	});
 

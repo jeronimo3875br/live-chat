@@ -37,6 +37,12 @@ window.addEventListener("load", (event) => {
 		};
 	});
 
+	function htmlEscape(text) {
+		return text.replace(/&/g, '&amp;').
+			replace(/</g, '&lt;').
+			replace(/"/g, '&quot;').
+			replace(/'/g, '&#039;');
+	};
 
 	const form = document.querySelector("#messageForm");
 	form.addEventListener("submit", (event) => {
@@ -45,12 +51,12 @@ window.addEventListener("load", (event) => {
 
 		window.navigator.vibrate(200);
 
-		var usr = window.localStorage.getItem("user");
+		var usr = htmlEscape(window.localStorage.getItem("user"));
 
-		var msg = document.querySelector("#msg").value;
+		var msg = htmlEscape(document.querySelector("#msg").value);
 
 		const Object = {
-			username: (usr.length <= 1 || usr == "") ? usr : "Anônimo",
+			username: usr == "" ? "Anônimo" : usr,
 			message: msg
 		};
 
