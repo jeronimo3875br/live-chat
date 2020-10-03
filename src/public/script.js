@@ -56,7 +56,7 @@ window.addEventListener("load", (event) => {
 		var msg = htmlEscape(document.querySelector("#msg").value);
 
 		const Object = {
-			username: (usr.length <= 3) ? "Anônimo" : usr,
+			username: (usr == null) ? "Anônimo" : usr,
 			message: msg
 		};
 
