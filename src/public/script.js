@@ -3,6 +3,10 @@ window.addEventListener("load", (event) => {
 	$('#loginModal').modal("show")
 	
 	const formLogin = document.querySelector("#getUser");
+
+        var boxMessage = document.querySelector("#messages");
+        const divY = boxMessage.scrollHeight;
+        boxMessage.scrollTop = divY;
 	
 	formLogin.addEventListener("submit", (event) => {
 		
