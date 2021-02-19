@@ -6,19 +6,39 @@
 	box-sizing: border-box;
 }
 
+body {
+	background-color: #fafafa;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+.context {
+	margin-top: 10px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+
 #messages {
-	width: 100%;
-	height: 50vh;
+	top: 20vh;
+	width: 50vw;
+	height: 75vh;
 	border: 1px solid #dddddd;
 	padding: 20px;
-	overflow: scroll;
+	overflow-y: scroll;
+	scrollbar-width: 0;
+	background-color: #ffffff;
+	box-shadow: 0px 0px 3px grey;
+	border-radius: 5px;
 }
 
 .wave {
-	position: relative;
+	position: absolute;
 	top: 0px;
 	z-index: -999;
-	margin-bottom: 40px;
 }
 
 #sendmessage {
@@ -28,4 +48,26 @@
 		#0074FF
 	);
 	border: 1px solid #dddddd;
+	border-radius: 50px;
+	box-shadow: 0px 0px 3px grey;
+	border: 2px solid #ffffff;
+}
+
+#messageForm {
+	width: 50vw;
+}
+
+#msg {
+	background-color: #ffffff;
+	box-shadow : 0px 0px 3px grey;
+}
+
+@media screen and (max-width: 750px){
+	#messages {
+		width: 90vw;
+	}
+
+	#messageForm {
+		width: 90vw;
+	}
 }
